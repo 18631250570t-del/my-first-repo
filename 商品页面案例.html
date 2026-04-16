@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #f5f5f5;
+    }
+
+    .box {
+        width: 234px;
+        height: 300px;
+        border-radius: 10px;
+        background-color: #fff;
+        transition: all 0.5s;
+    }
+
+    .png {
+        margin-top: 20px;
+        text-align: center;
+
+    }
+
+    .title h5 {
+        font-size: 16px;
+        color: black;
+        text-align: center;
+
+    }
+
+    .title p {
+        font-size: 12px;
+        color: #999;
+        text-align: center;
+    }
+
+    .price {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .price span {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 20px;
+        color: #ff6700;
+
+    }
+
+    .price del {
+        font-size: 12px;
+        color: #999;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* .price p.hhua {
+        font-size: 13px;
+        color: #999;
+
+
+    } */
+    .box:hover {
+        box-shadow: 0 0 10px #999;
+        width: 250px;
+        height: 300px;
+    }
+</style>
+
+<body>
+
+    <script>
+        // 创建一个容器来容纳多个商品盒子
+        let container = document.createElement('div');
+        container.className = 'container';
+        let goods = [
+            {
+                img: 'tshit1.png',
+                title: '秋简纯色百搭休闲外套',
+                price: '299元',
+                desc: '通勤日常基础款宽松显瘦外套'
+            }
+            ,
+            {
+                img: 'tshit2.png',
+                title: '简约百搭外套',
+                price: '295元',
+                desc: '利落版型，日常穿搭首选'
+            }
+            ,
+            {
+                img: 'tshit3.png',
+                title: '休闲通勤外套',
+                price: '239元',
+                desc: '舒适显瘦，四季都好搭'
+            }
+            ,
+            {
+                img: 'tshit4.png',
+                title: '百搭休闲外套',
+                price: '199元',
+                desc: '宽松显瘦外套'
+            }
+            ,
+            {
+                img: 'tshit5.png',
+                title: '秋冬纯色百搭休闲外套',
+                price: '99元',
+                desc: '通勤日常基础款宽松显瘦外套'
+            }
+            ,
+            {
+                img: 'tshit6.png',
+                title: '极简纯色百搭休闲外套',
+                price: '250元',
+                desc: '通勤日常基础款宽松显瘦外套'
+            }
+            ,
+            {
+                img: 'tshit7.png',
+                title: '秋冬新款纯色百搭外套',
+                price: '241元',
+                desc: '通勤日常基础款宽松显瘦外套'
+            }
+            ,
+            {
+                img: 'tshit1.png',
+                title: '秋冬新款极简休闲外套',
+                price: '1299元',
+                desc: '通勤日常基础款宽松显瘦外套'
+            }
+            ,
+            {
+                img: 'tshit6.png',
+                title: '秋冬新款极简纯色外套',
+                price: '852元',
+                desc: '通勤日常基础款宽松显瘦外套'
+            }
+            ,
+            {
+                img: 'tshit2.png',
+                title: '秋冬新款极简休闲外套',
+                price: '888元',
+                desc: '通勤日常基础款宽松显瘦外套'
+            }
+            ,
+            {
+                img: 'tshit7.png',
+                title: '纯色百搭休闲外套',
+                price: '66元',
+                desc: '通勤日常|基础款宽松显瘦外套'
+            }
+            ,
+            {
+                img: 'tshit5.png',
+                title: '秋冬新款百搭休闲外套',
+                price: '88元',
+                desc: '通勤日常|基础款宽松显瘦外套'
+            }
+            ,
+            {
+                img: 'tshit6.png',
+                title: '百搭休闲外套',
+                price: '29.9元',
+                desc: '通勤日常|基础款宽松显瘦外套'
+            }
+            ,
+            {
+                img: 'tshit4.png',
+                title: '极简纯色百搭休闲外套',
+                price: '596元',
+                desc: '通勤日常|基础款宽松显瘦外套'
+            }
+            ,
+            {
+                img: 'tshit5.png',
+                title: '纯色百搭休闲外套',
+                price: '298元',
+                desc: '通勤日常|基础款宽松显瘦外套'
+            }
+            ,
+            {
+                img: 'tshit6.png',
+                title: '简纯色百搭休闲外套',
+                price: '950元',
+                desc: '通勤日常|基础款宽松显瘦外套'
+            }
+            ,
+            {
+                img: 'tshit3.png',
+                title: '秋色百搭休闲外套',
+                price: '520元',
+                desc: '通勤日常|基础款宽松显瘦外套'
+            }
+            ,
+            {
+                img: 'tshit5.png',
+                title: '秋色百搭休闲外套',
+                price: '1314元',
+                desc: '通勤日常基础款宽松显瘦外套'
+            }
+
+        ]
+        // 循环创建6个商品盒子
+        for (let i = 0; i < 18; i++) {
+            let box = document.createElement('div');
+            box.className = 'box';
+            box.innerHTML = `
+                <div class="png">
+                    <img src="${goods[i].img}" width="160px" height="160px" alt="衣服图片">
+                </div>
+                <div class="title">
+                    <h5>${goods[i].title}</h5>
+                    <p>${goods[i].desc}</p>
+                </div>
+                <div class="price">
+                    <span>${goods[i].price}</span>
+                    <del>1299元</del>
+                </div>
+            `;
+            container.appendChild(box);
+        }
+
+        // 将容器添加到body中
+        document.body.appendChild(container);
+    </script>
+</body>
+
+</html>
