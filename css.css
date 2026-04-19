@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fefefd;
+    font-family: PingFangSC-Regular, 'Microsoft YaHei', sans-serif;
+}
+
+.center {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 顶部导航栏 */
+.head {
+    height: 40px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.head ul {
+    height: 40px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.head ul li {
+    height: 40px;
+    line-height: 40px;
+    margin: 0 12px;
+    position: relative;
+}
+
+.head ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 12px;
+    background-color: #666;
+}
+
+.head ul li a {
+    font-size: 12px;
+    font-weight: 400;
+    display: block;
+    color: #999;
+    text-decoration: none;
+    padding: 0 8px;
+}
+
+.head ul li a:hover {
+    color: #fff;
+}
+
+/* 主要导航栏 */
+.head1 {
+    height: 132px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.head1.center {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.head1 .logo {
+    width: 200px;
+    height: 88px;
+    background-color: #c8bcf4;
+    margin-right: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head1 .logo img {
+    width: 88px;
+    height: 88px;
+}
+
+.head1 .navhead {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.head1 .navhead ul {
+    height: 22.5px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.head1 .navhead ul li {
+    margin-right: 30px;
+    border-right: none;
+    padding-right: 0;
+}
+
+.head1 .navhead ul li a {
+    text-decoration: none;
+    display: block;
+    width: 95px;
+    height: 22.5px;
+    line-height: 22.5px;
+    text-align: center;
+    font-size: 16px;
+    color: #333333;
+    font-weight: 400;
+}
+
+.head1 .navhead ul li a:hover {
+    color: #c8bcf4;
+}
+
+.head1 .navhead .search {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 36px;
+    background-color: #f5f5f5;
+    border-radius: 18px;
+    padding: 0 15px;
+}
+
+.head1 .navhead .search input {
+    flex: 1;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    color: #333;
+}
+
+.head1 .navhead .search input::placeholder {
+    color: #999;
+}
+
+.head1 .navhead .search button {
+    width: 60px;
+    height: 28px;
+    border: none;
+    background-color: #c8bcf4;
+    border-radius: 14px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* 主体部分 */
+.body1 {
+    position: relative;
+    height: 500px;
+    margin-top: 20px;
+}
+
+.body1 .bottomImg {
+    width: 100%;
+    height: 500px;
+    background-image: url(./bottomimg.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+}
+
+/* 侧边导航栏 */
+.body1 .navleft {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: 100%;
+    width: 234px;
+    background-color: #615473c9;
+    border-radius: 4px 0 0 4px;
+    z-index: 10;
+}
+
+.body1 .navleft ul {
+    height: 100%;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.body1 .navleft ul li {
+    height: 71.5px;
+    line-height: 71.5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.body1 .navleft ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+}
+
+.body1 .navleft ul li a:hover {
+    color: #c8bcf4;
+}
+
+.minbody {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 112px;
+
+
+}
+
+.minbody .title {
+    width: 200px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    color: #b06ebd;
+
+
+}
+
+.minbody .content {
+    width: 200px;
+    height: 50px;
+
+
+}
+
+.minbody .content p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #a0a0a0;
+    margin-left: 20px;
+    line-height: 60px;
+
+}
+
+.minbody .more {
+    margin-left: 710px;
+}
+
+
+.minbody .more a {
+    text-decoration: none;
+    color: #cbace7;
+    display: block;
+}
+
+
+
+
+.shop {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 404px;
+    width: 100%;
+
+
+}
+
+.shop ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.shop ul li {
+    margin-right: 5px;
+}
+
+
+
+.shopimg {
+    width: 303px;
+    height: 303px;
+
+
+
+}
+
+.shop ul li:last-child {
+    margin-right: 0;
+    border-right: none;
+}
+
+.shoptitle {
+
+
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.shopprice {
+    background-color: #f7f7f7;
+    border-radius: 4px;
+
+
+
+}
+
+.shopimg img {
+    border-radius: 4px 4px 0 0px;
+
+    width: 303px;
+    height: 303px;
+}
+
+.shopprice p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #b80000;
+
+
+    text-align: center;
+}
+
+.shoptitle h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #31264a;
+
+
+    text-align: center;
+}
