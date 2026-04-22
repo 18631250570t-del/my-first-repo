@@ -17,6 +17,7 @@ body {
 
 /* 顶部导航栏 */
 .head {
+
     height: 40px;
     background-color: #333;
     display: flex;
@@ -66,6 +67,7 @@ body {
 
 /* 主要导航栏 */
 .head1 {
+
     height: 132px;
     background-color: #fff;
     display: flex;
@@ -164,6 +166,13 @@ body {
     cursor: pointer;
     font-size: 14px;
     margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.head1 .navhead .search button:hover {
+    background-color: #a894e0;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* 主体部分 */
@@ -180,6 +189,13 @@ body {
     background-size: cover;
     background-position: center;
     border-radius: 4px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.body1 .bottomImg:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* 侧边导航栏 */
@@ -215,10 +231,13 @@ body {
     text-decoration: none;
     color: #ffffff;
     display: block;
+    transition: all 0.3s ease;
 }
 
 .body1 .navleft ul li a:hover {
     color: #c8bcf4;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
 }
 
 /* 大标题定义 */
@@ -268,6 +287,44 @@ body {
     text-decoration: none;
     color: #cbace7;
     display: block;
+    transition: all 0.3s ease;
+}
+
+.minbody .more a:hover {
+    color: #a894e0;
+    transform: translateX(5px);
+}
+
+.jutiright ul li a {
+    text-decoration: none;
+    display: block;
+    color: #8b5895;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    letter-spacing: 0;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.jutiright ul li a:hover {
+    color: #a894e0;
+    transform: translateY(-2px);
+}
+
+.jutirightAll a {
+    display: block;
+    text-decoration: none;
+    color: #e2a8ed;
+    font-family: PingFangSC-Regular;
+    font-size: 15px;
+    letter-spacing: 0;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.jutirightAll a:hover {
+    color: #a894e0;
+    transform: translateX(5px);
 }
 
 
@@ -292,6 +349,13 @@ body {
 
 .shop ul li {
     margin-right: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.shop ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -399,12 +463,25 @@ body {
 }
 
 .pin1 li {
-
     margin-right: 5px;
     height: 304px;
     width: 244px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
 
+.pin1 li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
 
+.pin1 li img {
+    transition: all 0.3s ease;
+}
+
+.pin1 li:hover img {
+    transform: translateY(-5px);
 }
 
 .pin1 li:last-child {
@@ -491,9 +568,27 @@ body {
 
 }
 
+.jutiCe {
+    width: 248px;
+    height: 610px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
 .jutiCe img {
     width: 248px;
     height: 610px;
+    transition: all 0.3s ease;
+}
+
+.jutiCe:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.jutiCe:hover img {
+    transform: translateY(-5px);
 }
 
 .jutiTo ul {
@@ -512,6 +607,13 @@ body {
 .jutiTo ul li {
     width: 240px;
     height: 305px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.jutiTo ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .jutiToimg {
@@ -521,7 +623,21 @@ body {
     margin-left: 26px;
     margin-right: 26px;
     background-color: #fff;
+    transition: all 0.3s ease;
+}
 
+.jutiTo ul li:hover .jutiToimg {
+    transform: translateY(-3px);
+}
+
+.jutiToimg img {
+    width: 190px;
+    height: 171px;
+    transition: all 0.3s ease;
+}
+
+.jutiTo ul li:hover .jutiToimg img {
+    transform: translateY(-3px);
 }
 
 .jutiTointitle {
@@ -558,4 +674,79 @@ body {
 .jutiToimg img {
     width: 190px;
     height: 171px;
+}
+
+/* 页脚 */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+    height: auto;
+    line-height: 1.4;
+}
+
+.footer-section ul li a {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0;
+    display: block;
+}
+
+.footer-section ul li a:hover {
+    color: #c8bcf4;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #999;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
