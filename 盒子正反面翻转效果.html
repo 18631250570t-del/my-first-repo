@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        /* 让盒子在页面居中 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        gap: 20px;
+
+    }
+
+    .box {
+        position: relative;
+        width: 500px;
+        height: 800px;
+        perspective: 1000px;
+
+    }
+
+    .front {
+        border-radius: 10px;
+        line-height: 80px;
+        font-size: 30px;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        backface-visibility: hidden;
+
+        width: 500px;
+        height: 800px;
+        background-color: aqua;
+        z-index: 1;
+        transition: all 0.5s;
+
+
+    }
+
+    .back {
+        border-radius: 10px;
+        line-height: 80px;
+        font-size: 30px;
+        text-align: center;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+
+
+
+        width: 500px;
+        height: 800px;
+        background-color: #2e761b;
+        transform: rotateY(180deg);
+        transition: all 0.5s;
+
+    }
+
+    .box:hover .front {
+        transform: rotateY(-180deg);
+
+
+
+    }
+
+    .box:hover .back {
+        transform: rotateY(0deg);
+
+
+
+    }
+</style>
+
+<body>
+    <div class="box">
+        <div class="front">
+            <div class="flip-box-front">
+                <h1>欢迎</h1>
+                <p>欢迎来到我们的网站</p>
+                <p>这里有优质的商品</p>
+                <p>和贴心的服务</p>
+                <div class="icons">
+                    <span class="icon">🌟</span>
+                    <span class="icon">🛍️</span>
+                    <span class="icon">💖</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="back">
+            <div class="flip-box-back">
+                <h1>联系我们</h1>
+                <p>电话：123-4567-8910</p>
+                <p>邮箱：info@example.com</p>
+                <p>地址：北京市海淀区</p>
+                <p>营业时间：9:00-21:00</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
