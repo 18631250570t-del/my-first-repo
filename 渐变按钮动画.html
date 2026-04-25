@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .jianbian {
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 300px;
+        height: 150px;
+
+        border-radius: 20%;
+        margin: 100px auto;
+        text-align: center;
+        line-height: 150px;
+        font-size: 30px;
+        color: #fff;
+    }
+
+    .jianbian::before {
+
+        content: "";
+        position: absolute;
+
+        width: 500px;
+        height: 500px;
+        background-image: conic-gradient(transparent, transparent, transparent, #b1d166);
+        animation: rotate 1s linear infinite;
+        z-index: -1;
+
+
+    }
+
+    .jianbian::after {
+
+        content: "";
+        position: absolute;
+
+        /* top: 3px;
+        left: 3px;
+        right: 3px;
+        bottom: 3px; ===*/
+        inset: 10px;
+
+        background-color: black;
+        border-radius: 20%;
+        z-index: -1;
+    }
+
+    @keyframes rotate {
+
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+<body>
+
+    <div class="jianbian">
+        渐变按钮动画
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
