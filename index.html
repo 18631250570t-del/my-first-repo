@@ -1,791 +1,303 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>月亮售卖店</title>
     <link rel="stylesheet" href="./css.css">
+    <link rel="stylesheet" href="./base.css">
 </head>
 
 <body>
-    <!-- 登录注册区 -->
-    <!-- 登录注册标题区 -->
-    <div class="head">
-        <ul>
-            <li><a href="">请先登录</a></li>
-            <li><a href="">免费注册</a></li>
-            <li><a href="">我的订单</a></li>
-            <li><a href="">我的收藏</a></li>
-            <li><a href="">帮助中心</a></li>
-            <li><a href="">购物车</a></li>
-            <li><a href="">在线客服</a></li>
+    <!-- ==================== 头部区域 ==================== -->
+    <header class="header">
+        <!-- 顶部栏：时间和图标 -->
+        <div class="header-top">
 
-        </ul>
+            <div class="header-right">
+                <!-- 搜索图标 -->
+                <svg viewBox="0 0 1024 1024">
+                    <path
+                        d="M741.216 695.968l192.896 192.864a31.968 31.968 0 1 1-45.28 45.28L695.968 741.216A382.464 382.464 0 0 1 448 832C235.936 832 64 660.064 64 448S235.936 64 448 64s384 171.936 384 384c0 94.528-34.144 181.056-90.784 247.968zM448 768c176.736 0 320-143.264 320-320S624.736 128 448 128 128 271.264 128 448s143.264 320 320 320z"
+                        fill="#a98ac9" />
+                </svg>
+                <!-- 购物车图标 -->
+                <div class="cart-wrapper">
+                    <svg viewBox="0 0 1024 1024">
+                        <path
+                            d="M384 736c-53.02 0-96 42.98-96 96s42.98 96 96 96 96-42.98 96-96-42.98-96-96-96z m0 128c-17.673 0-32-14.327-32-32s14.327-32 32-32 32 14.327 32 32-14.327 32-32 32zM800 736c-53.02 0-96 42.98-96 96s42.98 96 96 96 96-42.98 96-96-42.98-96-96-96z m0 128c-17.674 0-32-14.327-32-32s14.326-32 32-32 32 14.327 32 32-14.326 32-32 32zM907.942 225.104c-27.701-34.261-73.735-33.707-84.16-33.104H253.553l-5.959-37.078a32.208 32.208 0 0 0-0.55-2.683C241.822 131.351 222.668 96 184 96H96c-17.673 0-32 14.327-32 32s14.327 32 32 32h85.241c1.212 1.706 2.647 4.596 3.486 7.085l71.678 445.993c0.145 0.901 0.329 1.797 0.55 2.683 1.695 6.78 11.223 41.673 32.417 62.867C314.033 703.288 348.187 704 352 704h512c17.673 0 32-14.327 32-32s-14.327-32-32-32H352.333c-3.14-0.13-12.66-1.581-17.706-6.628-6.26-6.26-12.644-22.351-15.281-31.994L315.268 576h509.584c14.533 0 27.241-9.794 30.944-23.848 0.314-1.194 31.831-120.639 62.9-222.846 13.325-43.837 9.707-78.896-10.754-104.202z m-50.48 85.589C834.419 386.498 811.167 471.548 800.278 512H304.982l-41.143-256h561.013c0.897 0 1.795-0.038 2.689-0.113 3.54-0.3 23.104 0.145 30.634 9.457 6.038 7.467 5.778 23.996-0.713 45.349z"
+                            fill="#a98ac9" />
+                    </svg>
+                    <span class="cart-badge">2</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logo和店铺信息 -->
+        <div class="logo-section">
+            <h1 class="logo-title">月亮售卖店<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" version="1.1">
+                    <path
+                        d="M530.432 945.3568A434.176 434.176 0 0 1 491.52 78.6432a40.96 40.96 0 0 1 26.0096 70.8608 261.7344 261.7344 0 0 0-83.5584 192.3072 266.24 266.24 0 0 0 266.24 266.24 262.3488 262.3488 0 0 0 191.6928-82.944s0 1.024 0 0a40.96 40.96 0 0 1 70.656 24.576 434.176 434.176 0 0 1-432.128 395.6736z m0 0"
+                        fill="#ffd93d" />
+                </svg></h1>
+            <p class="logo-subtitle">每一件文具 · 都值得被喜欢</p>
+        </div>
+
+        <!-- 搜索栏 -->
+        <div class="search-bar">
+            <svg viewBox="0 0 1024 1024">
+                <path
+                    d="M741.216 695.968l192.896 192.864a31.968 31.968 0 1 1-45.28 45.28L695.968 741.216A382.464 382.464 0 0 1 448 832C235.936 832 64 660.064 64 448S235.936 64 448 64s384 171.936 384 384c0 94.528-34.144 181.056-90.784 247.968zM448 768c176.736 0 320-143.264 320-320S624.736 128 448 128 128 271.264 128 448s143.264 320 320 320z"
+                    fill="#a98ac9" />
+            </svg>
+            <input type="text" placeholder="搜索你喜欢的文具" id="searchInput">
+            <button id="searchButton">搜索</button>
+
+            <!-- 下拉菜单 -->
+            <div class="search-dropdown" id="searchDropdown">
+                <div class="dropdown-header">
+                    <span>热门搜索</span>
+                </div>
+                <ul class="dropdown-list" id="dropdownList">
+                    <!-- 动态生成 -->
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== 轮播图区域 ==================== -->
+    <div class="carousel">
+        <!-- 上一页按钮 -->
+        <button class="carousel-prev" aria-label="上一页">
+            <svg viewBox="0 0 1024 1024">
+                <path
+                    d="M691.2 896L256 512l435.2-384c19.2-16 19.2-48 0-64-19.2-16-48-16-64 0L160 480c-19.2 16-19.2 48 0 64l467.2 416c16 16 44.8 16 64 0 19.2-16 19.2-48 0-64z" />
+            </svg>
+        </button>
+
+        <div class="carousel-item">
+
+            <img src="/tshit1.png" alt="">
+        </div>
+
+        <!-- 下一页按钮 -->
+        <button class="carousel-next" aria-label="下一页">
+            <svg viewBox="0 0 1024 1024">
+                <path
+                    d="M332.8 896L768 512 332.8 128c-19.2-16-19.2-48 0-64 19.2-16 48-16 64 0l467.2 416c19.2 16 19.2 48 0 64L396.8 896c-16 16-44.8 16-64 0-19.2-16-19.2-48 0-64z" />
+            </svg>
+        </button>
+
+        <div class="carousel-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
     </div>
-    <!-- 导航栏区 -->
-    <!-- 导航栏标题区 -->
-    <div class="head1 center">
-        <div class="logo"><img src="logo.jpg" alt=""></div>
-        <div class="navhead">
-            <ul>
-                <li><a href="">首页</a></li>
-                <li><a href="">书写工具</a></li>
-                <li><a href="">本册纸品</a></li>
-                <li><a href="">桌面收纳</a></li>
-                <li><a href="">治愈小物</a></li>
-                <li><a href="">限定礼盒</a></li>
-                <li><a href="">其他商品</a></li>
-                <li><a href="">联系我们</a></li>
-            </ul>
-            <div class="search">
-                <input type="text" placeholder="搜索">
-                <button>搜索</button>
+
+    <!-- ==================== 分类导航 ==================== -->
+    <nav class="category-nav">
+        <div class="category-item">
+            <div class="category-icon">
+                <!-- 书写工具图标占位 -->
+                <svg viewBox="0 0 1024 1024">
+                    <rect x="300" y="100" width="100" height="724" rx="20" />
+                    <rect x="450" y="100" width="100" height="724" rx="20" />
+                    <rect x="600" y="100" width="100" height="724" rx="20" />
+                    <circle cx="350" cy="150" r="30" fill="#fff" />
+                    <circle cx="500" cy="150" r="30" fill="#fff" />
+                    <circle cx="650" cy="150" r="30" fill="#fff" />
+                </svg>
             </div>
-            <div class="tubiao">
-                <img src="" alt="">
+            <span>书写工具</span>
+        </div>
+        <div class="category-item">
+            <div class="category-icon">
+                <!-- 笔记本图标占位 -->
+                <svg viewBox="0 0 1024 1024">
+                    <rect x="200" y="200" width="624" height="624" rx="20" />
+                    <rect x="250" y="250" width="524" height="524" rx="10" fill="#fff" />
+                    <rect x="300" y="300" width="424" height="80" rx="8" fill="#e8d9f5" />
+                </svg>
+            </div>
+            <span>笔记本</span>
+        </div>
+        <div class="category-item">
+            <div class="category-icon">
+                <!-- 胶带贴纸图标占位 -->
+                <svg viewBox="0 0 1024 1024">
+                    <path d="M512 100 Q800 300 800 512 Q800 724 512 924 Q224 724 224 512 Q224 300 512 100" />
+                    <path d="M512 200 Q700 350 700 512 Q700 674 512 824 Q324 674 324 512 Q324 350 512 200"
+                        fill="#fff" />
+                </svg>
+            </div>
+            <span>胶带贴纸</span>
+        </div>
+        <div class="category-item">
+            <div class="category-icon">
+                <!-- 桌面收纳图标占位 -->
+                <svg viewBox="0 0 1024 1024">
+                    <rect x="200" y="300" width="624" height="424" rx="20" />
+                    <rect x="250" y="350" width="524" height="324" rx="10" fill="#fff" />
+                    <rect x="300" y="400" width="150" height="150" rx="8" />
+                    <rect x="500" y="400" width="224" height="150" rx="8" />
+                </svg>
+            </div>
+            <span>桌面收纳</span>
+        </div>
+        <div class="category-item">
+            <div class="category-icon">
+                <!-- 文创周边图标占位 -->
+                <svg viewBox="0 0 1024 1024">
+                    <rect x="250" y="250" width="150" height="200" rx="10" />
+                    <rect x="300" y="400" width="50" height="150" />
+                    <rect x="450" y="250" width="300" height="300" rx="10" fill="#fff" />
+                    <rect x="500" y="300" width="200" height="80" rx="8" />
+                </svg>
+            </div>
+            <span>文创周边</span>
+        </div>
+    </nav>
+
+    <!-- ==================== 新品上架区域 ==================== -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">新品上架</h2>
+            <a href="#" class="section-more">更多 ></a>
+        </div>
+        <div class="product-list">
+            <!-- 商品卡片1 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <!-- 占位：月光中性笔套装图片 -->
+                </div>
+                <div class="product-name">月光中性笔套装</div>
+                <div class="product-price">18.8</div>
+            </div>
+            <!-- 商品卡片2 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <!-- 占位：星月月手账本图片 -->
+                </div>
+                <div class="product-name">星月月手账本</div>
+                <div class="product-price">16.8</div>
+            </div>
+            <!-- 商品卡片3 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <!-- 占位：月亮贴纸包图片 -->
+                </div>
+                <div class="product-name">月亮贴纸包</div>
+                <div class="product-price">9.9</div>
+            </div>
+            <!-- 商品卡片4 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <!-- 占位：月夜和纸胶带图片 -->
+                </div>
+                <div class="product-name">月夜和纸胶带</div>
+                <div class="product-price">12.8</div>
             </div>
         </div>
-    </div>
-    <!-- 测导航栏区 -->
-    <!-- 测导航栏标题区 -->
-    <div class="body1 center">
-        <div class="bottomImg">
+    </section>
 
+    <!-- ==================== 推荐卡片区域 ==================== -->
+    <section class="promo-section">
+        <!-- 人气推荐卡片 -->
+        <div class="promo-card promo-popular">
+            <h3 class="promo-title">人气推荐</h3>
+            <p class="promo-desc">大家都在买的好物</p>
+            <button class="promo-btn">去看看 ></button>
         </div>
-        <div class="navleft">
-            <ul>
-                <li><a href="">
-                        书写工具
-
-                    </a></li>
-                <li><a href="">
-                        优良纸品
-
-                    </a></li>
-                <li><a href="">
-                        收纳工具
-                    </a></li>
-                <li><a href="">
-                        治愈小物
-                    </a></li>
-                <li><a href="">
-                        限定礼盒
-
-                    </a></li>
-                <li><a href="">
-                        其他商品
-
-                    </a></li>
-                <li><a href="">
-                        联系我们
-
-                    </a></li>
-            </ul>
+        <!-- 限时优惠卡片 -->
+        <div class="promo-card promo-new">
+            <h3 class="promo-title">限时优惠</h3>
+            <p class="promo-desc">精选文具限时折扣</p>
+            <button class="promo-btn">去抢购 ></button>
         </div>
-    </div>
-    <!-- 新品推荐区 -->
-    <!-- 新品推荐标题区 -->
-    <div class="minbody center">
-        <div class="title">
-            <h2>新品推荐</h2>
-        </div>
-        <div class="content">
-            <p>夏季新品上新啦！</p>
-        </div>
-        <div class="more">
-            <a href="#">查看更多</a>
-        </div>
-    </div>
-    <!-- 新品推荐商品图片区 -->
-    <div class="shop center">
-        <ul>
-            <li>
-                <div class="shopimg">
-                    <img src="shop1.png" alt="">
-                </div>
-                <div class="shoptitle">
-                    <h3>精品钢笔一只装</h3>
-                </div>
-                <div class="shopprice">
-                    <p>¥10.00</p>
-                </div>
-            </li>
-            <li>
-                <div class="shopimg">
-                    <img src="shop2.png" alt="">
-                </div>
-                <div class="shoptitle">
-                    <h3>淡紫色厚a4笔记本</h3>
-                </div>
-                <div class="shopprice">
-                    <p>¥12.00</p>
-                </div>
-            </li>
-            <li>
-                <div class="shopimg">
-                    <img src="shop3.png" alt="">
-                </div>
-                <div class="shoptitle">
-                    <h3>镶钻发抓</h3>
-                </div>
-                <div class="shopprice">
-                    <p>¥15.00</p>
-                </div>
-            </li>
-            <li>
-                <div class="shopimg">
-                    <img src="shop4.png" alt="">
-                </div>
-                <div class="shoptitle">
-                    <h3>实木精简风书挡</h3>
-                </div>
-                <div class="shopprice">
-                    <p>¥9.9</p>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <!-- 人气推荐区 -->
-    <!-- 人气推荐特价标题区 -->
-    <div class="minbody center">
-        <div class="title">
-            <h2>人气推荐</h2>
-        </div>
-        <div class="content">
-            <p>人气爆款在这里！</p>
-        </div>
+    </section>
 
-    </div>
-    <!-- 人气特价推荐商品图片区 -->
-    <div class="shop center">
-        <ul>
-            <li>
-                <div class="shopimg">
-                    <img src="shop5.png" alt="">
+    <!-- ==================== 热门推荐区域 ==================== -->
+    <section class="hot-section">
+        <div class="section-header">
+            <h2 class="section-title">热门推荐 <span style="color: #f39c12;">★</span></h2>
+            <a href="#" class="section-more">更多 ></a>
+        </div>
+        <div class="hot-list">
+            <!-- 热门商品1 -->
+            <div class="hot-card">
+                <div class="hot-img">
+                    <!-- 占位：热门商品图片 -->
                 </div>
-                <div class="specialoffer">
-                    <h3>买到就是赚到</h3>
-                    <p>限时直降，福利不停</p>
-                </div>
-
-            </li>
-            <li>
-                <div class="shopimg">
-                    <img src="shop6.png" alt="">
-                </div>
-                <div class="specialoffer">
-                    <h3>火热售卖中</h3>
-                    <p>现在购买，享受优惠</p>
-                </div>
-
-            </li>
-            <li>
-                <div class="shopimg">
-                    <img src="shop7.png" alt="">
-                </div>
-                <div class="specialoffer">
-                    <h3>最新特价</h3>
-                    <p>好价特价，错过难寻</p>
-                </div>
-
-            </li>
-            <li>
-                <div class="shopimg">
-                    <img src="shop8.png" alt="">
-                </div>
-                <div class="specialoffer">
-                    <h3>特惠推荐</h3>
-                    <p>我猜得到 你的需要</p>
-                </div>
-
-            </li>
-        </ul>
-    </div>
-    <!--  品牌区 -->
-    <!-- 品牌标题区 -->
-    <div class="pin">
-        <div class="minbody center">
-            <div class="title">
-                <h2>热门品牌</h2>
+                <div class="hot-name">热门商品1</div>
             </div>
-            <div class="content">
-                <p>经典品质，专业服务</p>
+            <!-- 热门商品2 -->
+            <div class="hot-card">
+                <div class="hot-img">
+                    <!-- 占位：热门商品图片 -->
+                </div>
+                <div class="hot-name">热门商品2</div>
             </div>
-
-
-
-
-
-
-
-
+            <!-- 热门商品3 -->
+            <div class="hot-card">
+                <div class="hot-img">
+                    <!-- 占位：热门商品图片 -->
+                </div>
+                <div class="hot-name">热门商品3</div>
+            </div>
         </div>
-        <!-- 品牌图片区 -->
-        <div class="pin1 center">
-            <ul>
-                <li>
-                    <img src="pin1.png" alt="">
-                </li>
-                <li>
-                    <img src="pin2.png" alt="">
-                </li>
-                <li>
-                    <img src="pin3.png" alt="">
-                </li>
-                <li>
-                    <img src="pin4.png" alt="">
-                </li>
-                <li>
-                    <img src="pin6.png" alt="">
-                </li>
+    </section>
 
-            </ul>
+    <!-- ==================== 底部导航 ==================== -->
+    <nav class="bottom-nav">
+        <div class="nav-item active">
+            <svg viewBox="0 0 1024 1024">
+                <path
+                    d="M512 384c-79.56 0-144 64.44-144 144v288c0 13.255 10.745 24 24 24h48c13.255 0 24-10.745 24-24v-192c0-44.112 35.888-80 80-80s80 35.888 80 80v192c0 13.255 10.745 24 24 24h48c13.255 0 24-10.745 24-24v-288c0-79.56-64.44-144-144-144zM512 224c106.035 0 192 85.965 192 192s-85.965 192-192 192-192-85.965-192-192 85.965-192 192-192z" />
+            </svg>
+            <span>首页</span>
         </div>
-        <!-- 主题区 -->
-        <!-- 主题标题区 -->
-        <div class="juti">
-            <div class="minbody center">
-                <div class="title">
-                    <h2>笔类</h2>
-                </div>
-                <div class="jutiright">
-                    <ul>
-                        <li><a href="">热门</a></li>
-                        <li><a href="">钢笔</a></li>
-                        <li><a href="">铅笔</a></li>
-                        <li><a href="">中性笔</a></li>
-                        <li><a href="">荧光笔</a></li>
-                        <li><a href="">记号笔</a></li>
-                        <li><a href="">彩笔</a></li>
-                        <div class="jutirightAll"><a href="">查看全部</a></div>
-                    </ul>
-
-                </div>
+        <div class="nav-item">
+            <svg viewBox="0 0 1024 1024">
+                <rect x="150" y="100" width="120" height="824" rx="10" />
+                <rect x="330" y="100" width="120" height="824" rx="10" />
+                <rect x="510" y="100" width="120" height="824" rx="10" />
+                <rect x="690" y="100" width="120" height="824" rx="10" />
+                <rect x="870" y="100" width="120" height="824" rx="10" />
+            </svg>
+            <span>分类</span>
+        </div>
+        <div class="nav-item">
+            <svg viewBox="0 0 1024 1024">
+                <circle cx="512" cy="512" r="400" />
+                <path d="M512 200 L512 512 L700 650" stroke="#fff" stroke-width="40" fill="none" />
+                <circle cx="512" cy="512" r="80" fill="#fff" />
+            </svg>
+            <span>发现</span>
+        </div>
+        <div class="nav-item">
+            <div class="nav-cart">
+                <svg viewBox="0 0 1024 1024">
+                    <path d="M384 736c-53.02 0-96 42.98-96 96s42.98 96 96 96 96-42.98 96-96-42.98-96-96-96z" />
+                </svg>
+                <span class="badge">2</span>
             </div>
-            <!-- 主题图片区 -->
-            <div class="jutiBody center">
-                <div class="jutiCe">
-                    <img src="jutiCe.png" alt="">
-                </div>
-                <div class="jutiTo">
-                    <ul>
-                        <li>
-
-                            <div class="jutiToimg"><img src="juti1.png" alt=""></div>
-                            <div class="jutiTointitle">
-                                <h3>金属质感商务钢笔</h3>
-                                <p>简约轻奢金属笔身</p>
-                                <p>日常书写办公用笔</p>
-                            </div>
-                            <div class="jutiToprice">
-                                <p>¥59.99</p>
-                            </div>
-                        </li>
-                        <li>
-
-                            <div class="jutiToimg"><img src="juti2.png" alt=""></div>
-                            <div class="jutiTointitle">
-                                <h3>天然原木笔杆书写铅笔</h3>
-                                <p>天然原木笔杆书写铅笔</p>
-                                <p>学生绘图书写文具</p>
-                            </div>
-                            <div class="jutiToprice">
-                                <p>¥0.99</p>
-                            </div>
-                        </li>
-                        <li>
-
-                            <div class="jutiToimg"><img src="juti3.png" alt=""></div>
-                            <div class="jutiTointitle">
-                                <h3>按动顺滑中性笔</h3>
-                                <p>高颜值按动顺滑中性笔</p>
-                                <p>日常刷题便携书写笔</p>
-                            </div>
-                            <div class="jutiToprice">
-                                <p>¥2.99</p>
-                            </div>
-                        </li>
-                        <li>
-
-                            <div class="jutiToimg"><img src="juti4.png" alt=""></div>
-                            <div class="jutiTointitle">
-                                <h3>三色划重点荧光笔</h3>
-                                <p>马卡龙三色划重点荧光笔</p>
-                                <p>手账标记学习文具</p>
-                            </div>
-                            <div class="jutiToprice">
-                                <p>¥5.99</p>
-                            </div>
-                        </li>
-                        <li>
-
-                            <div class="jutiToimg"><img src="juti5.png" alt=""></div>
-                            <div class="jutiTointitle">
-                                <h3>防水速干双头记号笔</h3>
-                                <p>粗头防水耐用标记笔</p>
-                                <p>办公标注涂鸦文具</p>
-                            </div>
-                            <div class="jutiToprice">
-                                <p>¥1.99</p>
-                            </div>
-                        </li>
-                        <li>
-
-                            <div class="jutiToimg"><img src="juti6.png" alt=""></div>
-                            <div class="jutiTointitle">
-                                <h3>多色软头水彩彩笔套装</h3>
-                                <p>渐变色美术绘画软头笔</p>
-                                <p>手账插画美术用品</p>
-                            </div>
-                            <div class="jutiToprice">
-                                <p>¥39.99</p>
-                            </div>
-                        </li>
-                        <li>
-
-                            <div class="jutiToimg"><img src="juti7.png" alt=""></div>
-                            <div class="jutiTointitle">
-                                <h3>马卡龙纯色油画棒套装</h3>
-                                <p>软糯丝滑叠色油画棒</p>
-                                <p>儿童美术绘画蜡笔</p>
-                            </div>
-                            <div class="jutiToprice">
-                                <p>¥29.99</p>
-                            </div>
-                        </li>
-                        <li>
-
-                            <div class="jutiToimg"><img src="juti8.png" alt=""></div>
-                            <div class="jutiTointitle">
-                                <h3>传统古风狼毫小毛笔</h3>
-                                <p>传统古风狼毫小毛笔</p>
-                                <p>国风软头书写文房用具</p>
-                            </div>
-                            <div class="jutiToprice">
-                                <p>¥19.99</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- 主题区2 -->
-            <!-- 主题标题区 -->
-            <div class="juti">
-                <div class="minbody center">
-                    <div class="title">
-                        <h2>纸本</h2>
-                    </div>
-                    <div class="jutiright">
-                        <ul>
-                            <li><a href="">热门</a></li>
-                            <li><a href="">笔记本</a></li>
-                            <li><a href="">课业本</a></li>
-                            <li><a href="">功能本</a></li>
-                            <li><a href="">便携本</a></li>
-                            <li><a href="">便利贴</a></li>
-                            <li><a href="">手工纸</a></li>
-                            <div class="jutirightAll"><a href="">查看全部</a></div>
-                        </ul>
-
-                    </div>
-                </div>
-                <!-- 主题图片区 -->
-                <div class="jutiBody center">
-                    <div class="jutiCe">
-                        <img src="jutiCeBen.png" alt="">
-                    </div>
-                    <div class="jutiTo">
-                        <ul>
-                            <li>
-
-                                <div class="jutiToimg"><img src="juti9.png" alt=""></div>
-                                <div class="jutiTointitle">
-                                    <h3>活页可拆卸皮质笔记本</h3>
-                                    <p>简约软皮活页记事本</p>
-                                    <p>学生办公随身记录本</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥59.99</p>
-                                </div>
-                            </li>
-                            <li>
-
-                                <div class="jutiToimg"><img src="juti10.png" alt=""></div>
-                                <div class="jutiTointitle">
-                                    <h3>治愈插画手账日程本</h3>
-                                    <p>复古内页每日计划手账本</p>
-                                    <p>生活规划打卡文艺本子</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥0.99</p>
-                                </div>
-                            </li>
-                            <li>
-
-                                <div class="jutiToimg"><img src="juti11.png" alt=""></div>
-                                <div class="jutiTointitle">
-                                    <h3>简约横线软皮笔记本</h3>
-                                    <p>米黄护眼内页平摊记事本</p>
-                                    <p>课堂笔记随身便携本子</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥2.99</p>
-                                </div>
-                            </li>
-                            <li>
-
-                                <div class="jutiToimg"><img src="juti12.png" alt=""></div>
-                                <div class="jutiTointitle">
-                                    <h3>纯色渐变便利贴套装</h3>
-                                    <p>马卡龙彩色可撕便利贴</p>
-                                    <p>备忘标记手账便签文具</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥5.99</p>
-                                </div>
-                            </li>
-                            <li>
-
-                                <div class="jutiToimg"><img src="juti13.png" alt=""></div>
-                                <div class="jutiTointitle">
-                                    <h3>加厚彩色手工折纸</h3>
-                                    <p>多色纯色手工彩纸</p>
-                                    <p>儿童手工剪纸创意用纸</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥1.99</p>
-                                </div>
-                            </li>
-                            <li>
-
-                                <div class="jutiToimg"><img src="juti14.png" alt=""></div>
-                                <div class="jutiTointitle">
-                                    <h3>纯白加厚空白打印白纸</h3>
-                                    <p>足量原木浆无尘空白纸张</p>
-                                    <p>办公书写草稿通用纸张</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥39.99</p>
-                                </div>
-                            </li>
-                            <li>
-
-                                <div class="jutiToimg"><img src="juti15.png" alt=""></div>
-                                <div class="jutiTointitle">
-                                    <h3>2026 马年定制台历</h3>
-                                    <p>国风生肖桌面日历摆件</p>
-                                    <p>办公书写草稿通用纸张</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥29.99</p>
-                                </div>
-                            </li>
-                            <li>
-
-                                <div class="jutiToimg"><img src="juti16.png" alt=""></div>
-                                <div class="jutiTointitle">
-                                    <h3>古风水彩粗纹绘画纸</h3>
-                                    <p>棉浆加厚水彩写生画纸</p>
-                                    <p>美术手绘晕染专用画纸</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥19.99</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 工具类主题区 -->
-            <!-- 工具类主题标题区 -->
-            <div class="juti">
-                <div class="minbody center">
-                    <div class="title">
-                        <h2>工具类</h2>
-                    </div>
-                    <div class="jutiright">
-                        <ul>
-                            <li><a href="">热门</a></li>
-                            <li><a href="">剪刀</a></li>
-                            <li><a href="">尺子</a></li>
-                            <li><a href="">圆规</a></li>
-                            <li><a href="">订书机</a></li>
-                            <li><a href="">胶带</a></li>
-                            <li><a href="">胶水</a></li>
-                            <div class="jutirightAll"><a href="">查看全部</a></div>
-                        </ul>
-                    </div>
-                </div>
-                <!-- 工具类主题图片区 -->
-                <div class="jutiBody center">
-                    <div class="jutiCe">
-                        <img src="toolCe.png" alt="工具类">
-                    </div>
-                    <div class="jutiTo">
-                        <ul>
-                            <li>
-                                <div class="jutiToimg"><img src="tool1.png" alt="剪刀"></div>
-                                <div class="jutiTointitle">
-                                    <h3>不锈钢剪刀</h3>
-                                    <p>多功能不锈钢剪刀</p>
-                                    <p>家用办公剪纸刀</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥19.99</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="jutiToimg"><img src="tool2.png" alt="尺子"></div>
-                                <div class="jutiTointitle">
-                                    <h3>多功能尺子套装</h3>
-                                    <p>直尺三角尺量角器</p>
-                                    <p>学生绘图工具</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥29.99</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="jutiToimg"><img src="tool3.png" alt="圆规"></div>
-                                <div class="jutiTointitle">
-                                    <h3>金属圆规</h3>
-                                    <p>专业绘图圆规</p>
-                                    <p>学生几何作图工具</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥15.99</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="jutiToimg"><img src="tool4.png" alt="订书机"></div>
-                                <div class="jutiTointitle">
-                                    <h3>重型订书机</h3>
-                                    <p>省力重型订书机</p>
-                                    <p>办公装订工具</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥39.99</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="jutiToimg"><img src="tool5.png" alt="胶带"></div>
-                                <div class="jutiTointitle">
-                                    <h3>透明胶带</h3>
-                                    <p>高粘性透明胶带</p>
-                                    <p>办公家用打包胶带</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥9.99</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="jutiToimg"><img src="tool6.png" alt="胶水"></div>
-                                <div class="jutiTointitle">
-                                    <h3>液体胶水</h3>
-                                    <p>透明液体胶水</p>
-                                    <p>学生手工专用胶水</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥5.99</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="jutiToimg"><img src="tool7.png" alt="胶水"></div>
-                                <div class="jutiTointitle">
-                                    <h3>白乳胶水</h3>
-                                    <p>白液体胶水</p>
-                                    <p>学生手工专用胶水</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥5.99</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="jutiToimg"><img src="tool8.png" alt="胶水"></div>
-                                <div class="jutiTointitle">
-                                    <h3>502胶水</h3>
-                                    <p>透明液体胶水</p>
-                                    <p>学生手工专用胶水</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥5.99</p>
-                                </div>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 收纳类主题区 -->
-            <!-- 收纳类主题标题区 -->
-            <div class="juti">
-                <div class="minbody center">
-                    <div class="title">
-                        <h2>收纳类</h2>
-                    </div>
-                    <div class="jutiright">
-                        <ul>
-                            <li><a href="">热门</a></li>
-                            <li><a href="">桌面收纳</a></li>
-                            <li><a href="">文件收纳</a></li>
-                            <li><a href="">笔袋</a></li>
-                            <li><a href="">收纳盒</a></li>
-                            <li><a href="">收纳箱</a></li>
-                            <li><a href="">整理袋</a></li>
-                            <div class="jutirightAll"><a href="">查看全部</a></div>
-                        </ul>
-                    </div>
-                </div>
-                <!-- 收纳类主题图片区 -->
-                <div class="jutiBody center">
-                    <div class="jutiCe">
-                        <img src="storageCe.png" alt="收纳类">
-                    </div>
-                    <div class="jutiTo">
-                        <ul>
-                            <li>
-                                <div class="jutiToimg"><img src="storage1.png" alt="桌面收纳"></div>
-                                <div class="jutiTointitle">
-                                    <h3>桌面收纳盒</h3>
-                                    <p>多功能桌面收纳盒</p>
-                                    <p>整理文具杂物</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥39.99</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="jutiToimg"><img src="storage2.png" alt="文件收纳"></div>
-                                <div class="jutiTointitle">
-                                    <h3>文件收纳盒</h3>
-                                    <p>多层文件收纳盒</p>
-                                    <p>整理办公文件</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥49.99</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="jutiToimg"><img src="storage3.png" alt="笔袋"></div>
-                                <div class="jutiTointitle">
-                                    <h3>大容量笔袋</h3>
-                                    <p>多层大容量笔袋</p>
-                                    <p>学生文具收纳</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥29.99</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="jutiToimg"><img src="storage4.png" alt="收纳盒"></div>
-                                <div class="jutiTointitle">
-                                    <h3>抽屉收纳盒</h3>
-                                    <p>分隔抽屉收纳盒</p>
-                                    <p>整理小物件</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥19.99</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="jutiToimg"><img src="storage5.png" alt="收纳箱"></div>
-                                <div class="jutiTointitle">
-                                    <h3>塑料收纳箱</h3>
-                                    <p>透明塑料收纳箱</p>
-                                    <p>衣物杂物收纳</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥59.99</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="jutiToimg"><img src="storage6.png" alt="整理袋"></div>
-                                <div class="jutiTointitle">
-                                    <h3>衣物整理袋</h3>
-                                    <p>真空压缩整理袋</p>
-                                    <p>节省空间</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥25.99</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="jutiToimg"><img src="storage7.png" alt="整理袋"></div>
-                                <div class="jutiTointitle">
-                                    <h3>桌面书档</h3>
-                                    <p>桌面书档收纳</p>
-                                    <p>节省空间</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥25.99</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="jutiToimg"><img src="storage8.png" alt="整理袋"></div>
-                                <div class="jutiTointitle">
-                                    <h3>垃圾桶</h3>
-                                    <p>多功能垃圾桶</p>
-                                    <p>节省空间</p>
-                                </div>
-                                <div class="jutiToprice">
-                                    <p>¥25.99</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 页脚 -->
-            <footer class="footer">
-                <div class="footer-content center">
-                    <div class="footer-section">
-                        <h3>关于我们</h3>
-                        <ul>
-                            <li><a href="#">公司简介</a></li>
-                            <li><a href="#">联系我们</a></li>
-                            <li><a href="#">招贤纳士</a></li>
-                            <li><a href="#">隐私政策</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h3>购物指南</h3>
-                        <ul>
-                            <li><a href="#">购物流程</a></li>
-                            <li><a href="#">会员介绍</a></li>
-                            <li><a href="#">常见问题</a></li>
-                            <li><a href="#">支付方式</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h3>配送与售后</h3>
-                        <ul>
-                            <li><a href="#">配送方式</a></li>
-                            <li><a href="#">退换货政策</a></li>
-                            <li><a href="#">售后服务</a></li>
-                            <li><a href="#">维修中心</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h3>关注我们</h3>
-                        <ul>
-                            <li><a href="#">微信公众号</a></li>
-                            <li><a href="#">微博</a></li>
-                            <li><a href="#">抖音</a></li>
-                            <li><a href="#">小红书</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <div class="center">
-                        <p>&copy; 2026 月亮好物社. 保留所有权利.</p>
-                    </div>
-                </div>
-            </footer>
-
+            <span>购物车</span>
+        </div>
+        <div class="nav-item">
+            <svg viewBox="0 0 1024 1024">
+                <circle cx="512" cy="380" r="180" />
+                <path d="M420 650 Q512 750 604 650" stroke="currentColor" stroke-width="30" fill="none" />
+                <circle cx="450" cy="340" r="20" fill="#fff" />
+                <circle cx="574" cy="340" r="20" fill="#fff" />
+            </svg>
+            <span>我的</span>
+        </div>
+    </nav>
+    <script src="./js.js"></script>
 </body>
 
 </html>
